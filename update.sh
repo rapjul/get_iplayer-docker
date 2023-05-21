@@ -24,10 +24,10 @@ then
   echo ******** Warning - unable to check latest release!!  Please raise an issue https://github.com/kolonuk/get_iplayer-docker/issues/new
 fi
 
-echo get_iplayer installed        $VERSION
-echo get_iplayer release          $RELEASE
-echo get_iplayer webui installed  $VERSIONcgi
-echo get_iplayer webui release    $RELEASEcgi
+echo "get_iplayer installed        $VERSION"
+echo "get_iplayer release          $RELEASE"
+echo "get_iplayer webui installed  $VERSIONcgi"
+echo "get_iplayer webui release    $RELEASEcgi"
 
 if [[ "$VERSION" != "$VERSIONcgi" ]] || \
    [[ "$VERSION" == "" ]] || \
@@ -45,8 +45,8 @@ then
   else
     # Download and unpack release
     wget -q https://github.com/get-iplayer/get_iplayer/archive/v$RELEASE.tar.gz -O /root/latest.tar.gz
-    cd /root
-    tar -xzf /root/latest.tar.gz get_iplayer-$RELEASE --directory /root/ --strip-components=1
+    cd /root || exit
+    tar -xzf /root/latest.tar.gz "get_iplayer-$RELEASE" --directory /root/ --strip-components=1
     rm /root/latest.tar.gz
   fi
   

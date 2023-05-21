@@ -47,4 +47,3 @@ else
   echo err2 - Error occurred, pausing for 9999 seconds for investigation
   sleep 9999 # when testing, keep container up long enough to check stuff out
 fi
-
