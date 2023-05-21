@@ -3,7 +3,13 @@ version: '3.9'
 services:
   get_iplayer:
     container_name: get_iplayer
-    build: ./Dockerfile
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: get_iplayer:latest
+    restart: always
+    security_opt:
+      - no-new-privileges:true
     # networks:
     #   - frontend
     ports:
