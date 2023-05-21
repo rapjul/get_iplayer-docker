@@ -15,8 +15,8 @@ services:
         ports:
             - 8181:8181
         volumes:
-            - ./iplayer-output:/root/output:rw
-            - ./data:/root/.get_iplayer:rw
+            - /location/to/media/output:/root/output:rw
+            - /location/to/data:/root/.get_iplayer:rw
 
 # networks:
 #     frontend:
