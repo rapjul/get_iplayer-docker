@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  get_iplayer:
+    container_name: get_iplayer
+    build: ./Dockerfile
+    # networks:
+    #   - frontend
+    ports:
+      - 8181:8181
+
+# networks:
+#   frontend:
+#     external: true
